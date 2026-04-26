@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Stein Family Mountain Trip · Devil's Thumb Ranch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --pine: #2f4a3a;
+    --pine-deep: #1f3327;
+    --moss: #6c8a5f;
+    --rust: #b9542c;
+    --gold: #c89b3c;
+    --cream: #f8f3e7;
+    --paper: #fbf8f0;
+    --ink: #2a2a26;
+    --muted: #6b6a62;
+    --line: rgba(47, 74, 58, 0.15);
+    --shadow: 0 1px 2px rgba(31,51,39,0.05), 0 8px 24px rgba(31,51,39,0.08);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  a { color: var(--rust); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 78vh;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(180deg, #1a2c22 0%, #2f4a3a 60%, #4a6b54 100%);
+  }
+  .hero-mountains {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 32px 96px;
+  }
+  .hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 1.0;
+    font-weight: 800;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.25);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .hero .sub {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(18px, 2vw, 24px);
+    max-width: 620px;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 40px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 40px;
+    margin-top: 12px;
+  }
+  .hero-meta .item .label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 4px;
+  }
+  .hero-meta .item .value {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  /* PARTICIPANTS BAR */
+  .crew {
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+  }
+  .crew-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 32px;
+  }
+  .crew h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--pine);
+    margin-bottom: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  .crew-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+  }
+  .family {
+    border-left: 3px solid var(--gold);
+    padding-left: 14px;
+  }
+  .family-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    color: var(--pine-deep);
+    margin-bottom: 8px;
+    font-size: 17px;
+  }
+  .family-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .person {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 6px;
+    background: #fff;
+    border-radius: 999px;
+    font-size: 13px;
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--moss);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .a-spencer { background: #b9542c; }
+  .a-anahi   { background: #c89b3c; }
+  .a-serena  { background: #5a7a4a; }
+  .a-max     { background: #2f4a3a; }
+  .a-joey    { background: #8a5a3a; }
+  .a-noa     { background: #d27a4a; }
+  .a-skyler  { background: #4a5a7a; }
+  .a-lauralynn { background: #7a4a6a; }
+  .a-dylan   { background: #5a8a8a; }
+  .a-sonny   { background: #c8a04a; }
+  .a-jamma   { background: #6a4a3a; }
+  .a-jampa   { background: #4a3a2a; }
+
+  /* DAYS NAV */
+  .day-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(251,248,240,0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .day-nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 32px;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+  }
+  .day-nav a {
+    color: var(--pine-deep);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .day-nav a:hover { background: var(--cream); text-decoration: none; }
+  .day-nav a.active { background: var(--pine); color: #fff; }
+
+  /* DAY SECTIONS */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 32px 96px;
+  }
+  .day {
+    margin-bottom: 80px;
+    scroll-margin-top: 80px;
+  }
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--pine);
+  }
+  .day-header .day-name {
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--pine-deep);
+    line-height: 1;
+  }
+  .day-header .day-tag {
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .activities {
+    display: grid;
+    gap: 18px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 110px 1fr auto;
+    gap: 24px;
+    align-items: start;
+  }
+  .card.meal { border-left: 4px solid var(--rust); }
+  .card.activity { border-left: 4px solid var(--moss); }
+  .card.flight { border-left: 4px solid var(--gold); }
+  .card.free { border-left: 4px solid #c4c0b0; background: #fbf8f0; }
+
+  .time {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--pine-deep);
+    line-height: 1.2;
+  }
+  .time .duration {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  .body .title {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .body .meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .body .meta .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--cream);
+    border-radius: 4px;
+    margin-right: 6px;
+    color: var(--pine-deep);
+    font-weight: 500;
+  }
+  .body .going {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 4px;
+  }
+  .body .going .person { background: var(--cream); border-color: transparent; }
+  .open-slot {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: #fff;
+    border: 1px dashed var(--rust);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--rust);
+    font-weight: 500;
+  }
+  .open-slot::before {
+    content: "+";
+    font-weight: 700;
+  }
+
+  .spots {
+    text-align: right;
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+  }
+  .spots strong {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--pine-deep);
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .spots .full {
+    color: var(--moss);
+    font-weight: 600;
+    margin-top: 6px;
+  }
+  .spots .open {
+    color: var(--rust);
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--pine-deep);
+    color: rgba(255,255,255,0.78);
+    padding: 48px 32px;
+    text-align: center;
+    font-size: 14px;
+  }
+  footer .heart { color: var(--gold); }
+
+  @media (max-width: 720px) {
+    .card { grid-template-columns: 1fr; gap: 12px; }
+    .spots { text-align: left; }
+    .day-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .day-header .day-name { font-size: 36px; }
+    .hero-content { padding: 40px 24px 72px; }
+    main { padding: 40px 20px 72px; }
+  }
+
+  /* Print friendly */
+  @media print {
+    .day-nav, footer { display: none; }
+    .hero { min-height: auto; }
+    .card { break-inside: avoid; box-shadow: none; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-mountains" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sky stars -->
+    <g opacity="0.4">
+      <circle cx="120" cy="80" r="1" fill="#fff"/>
+      <circle cx="380" cy="140" r="1.2" fill="#fff"/>
+      <circle cx="620" cy="60" r="1" fill="#fff"/>
+      <circle cx="900" cy="120" r="1" fill="#fff"/>
+      <circle cx="1180" cy="90" r="1.4" fill="#fff"/>
+      <circle cx="1320" cy="180" r="1" fill="#fff"/>
+      <circle cx="240" cy="220" r="1" fill="#fff"/>
+      <circle cx="780" cy="200" r="1.2" fill="#fff"/>
+    </g>
+    <!-- Sun/moon -->
+    <circle cx="1100" cy="200" r="60" fill="#c89b3c" opacity="0.35"/>
+    <circle cx="1100" cy="200" r="40" fill="#c89b3c" opacity="0.6"/>
+    <!-- Back mountains -->
+    <path d="M0,520 L160,360 L300,440 L460,300 L620,420 L780,320 L960,440 L1120,340 L1280,420 L1440,360 L1440,800 L0,800 Z"
+          fill="#3a5446" opacity="0.7"/>
+    <!-- Mid mountains -->
+    <path d="M0,600 L120,460 L260,540 L420,400 L580,520 L740,420 L900,540 L1060,440 L1220,520 L1380,460 L1440,500 L1440,800 L0,800 Z"
+          fill="#2c4236" opacity="0.85"/>
+    <!-- Snow caps -->
+    <path d="M420,400 L450,440 L470,425 L490,440 L460,420 Z" fill="#f8f3e7" opacity="0.7"/>
+    <path d="M740,420 L770,460 L790,445 L810,460 L780,440 Z" fill="#f8f3e7" opacity="0.7"/>
+    <path d="M1060,440 L1090,480 L1110,465 L1130,480 L1100,460 Z" fill="#f8f3e7" opacity="0.7"/>
+    <!-- Front trees -->
+    <path d="M0,720 L60,600 L120,720 Z M100,720 L160,580 L220,720 Z M200,720 L260,620 L320,720 Z M300,720 L360,560 L420,720 Z M400,720 L460,620 L520,720 Z M500,720 L560,580 L620,720 Z M600,720 L660,610 L720,720 Z M700,720 L760,570 L820,720 Z M800,720 L860,620 L920,720 Z M900,720 L960,580 L1020,720 Z M1000,720 L1060,610 L1120,720 Z M1100,720 L1160,560 L1220,720 Z M1200,720 L1260,620 L1320,720 Z M1300,720 L1360,580 L1420,720 Z"
+          fill="#1a2c22"/>
+    <!-- Ground -->
+    <rect x="0" y="720" width="1440" height="80" fill="#1a2c22"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="eyebrow">Family Gathering · Spring 2026</div>
+    <h1>The Mountain<br/><em>Reunion</em></h1>
+    <p class="sub">Five days at Devil's Thumb Ranch — yoga, horses, fly fishing, smores, and a whole lot of family. Here's everything we're up to.</p>
+    <div class="hero-meta">
+      <div class="item">
+        <div class="label">Where</div>
+        <div class="value">Devil's Thumb Ranch</div>
+      </div>
+      <div class="item">
+        <div class="label">When</div>
+        <div class="value">Friday → Tuesday</div>
+      </div>
+      <div class="item">
+        <div class="label">Crew</div>
+        <div class="value">11 of us</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREW -->
+<section class="crew">
+  <div class="crew-inner">
+    <h3>The Crew</h3>
+    <div class="crew-grid">
+      <div class="family">
+        <div class="family-name">From New York</div>
+        <div class="family-members">
+          <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+          <span class="person"><span class="avatar a-max">M</span>Max</span>
+          <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+          <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+        </div>
+      </div>
+      <div class="family">
+        <div class="family-name">From San Diego</div>
+        <div class="family-members">
+          <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+          <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+        </div>
+      </div>
+      <div class="family">
+        <div class="family-name">The Skyler Family</div>
+        <div class="family-members">
+          <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+          <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+          <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+          <span class="person"><span class="avatar a-sonny">S</span>Sonny</span>
+        </div>
+      </div>
+      <div class="family">
+        <div class="family-name">Grandparents</div>
+        <div class="family-members">
+          <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+          <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY NAV -->
+<nav class="day-nav">
+  <div class="day-nav-inner">
+    <a href="#friday" class="day-link">Friday · Arrival</a>
+    <a href="#saturday" class="day-link">Saturday</a>
+    <a href="#sunday" class="day-link">Sunday</a>
+    <a href="#monday" class="day-link">Monday</a>
+    <a href="#tuesday" class="day-link">Tuesday · Departure</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- FRIDAY -->
+  <section class="day" id="friday">
+    <div class="day-header">
+      <div class="day-name">Friday</div>
+      <div class="day-tag">Travel · Settle In · First Dinner</div>
+    </div>
+    <div class="activities">
+
+      <div class="card flight">
+        <div class="time">10:33<span style="font-size:14px">am</span></div>
+        <div class="body">
+          <div class="title">Alaska #1618 → Denver</div>
+          <div class="meta"><span class="pill">Flight</span></div>
+          <div class="going">
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+          </div>
+        </div>
+        <div class="spots"><strong>2</strong>flying</div>
+      </div>
+
+      <div class="card flight">
+        <div class="time">12:02<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">United #552 → Denver</div>
+          <div class="meta"><span class="pill">Flight</span></div>
+          <div class="going">
+            <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+            <span class="person"><span class="avatar a-sonny">S</span>Sonny</span>
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>6</strong>flying</div>
+      </div>
+
+      <div class="card flight">
+        <div class="time">12:20<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">United #71 → Denver</div>
+          <div class="meta"><span class="pill">Flight</span></div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>4</strong>flying</div>
+      </div>
+
+      <div class="card free">
+        <div class="time">3:00<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">Lawn Games & Swim</div>
+          <div class="meta"><span class="pill">Free time</span> Settle in, stretch out, get the kids running</div>
+        </div>
+        <div class="spots">all welcome</div>
+      </div>
+
+      <div class="card meal">
+        <div class="time">5:30<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">Dinner at Heck's Tavern</div>
+          <div class="meta"><span class="pill">Meal</span> First family dinner together</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+            <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>11</strong>seats<div class="full">Full crew</div></div>
+      </div>
+
+      <div class="card free">
+        <div class="time">7:00<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">S'mores by the Fire</div>
+          <div class="meta"><span class="pill">Tradition</span> Marshmallows, chocolate, the works</div>
+        </div>
+        <div class="spots">all welcome</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SATURDAY -->
+  <section class="day" id="saturday">
+    <div class="day-header">
+      <div class="day-name">Saturday</div>
+      <div class="day-tag">Yoga · Horses · Wagon Ride · Celebration Dinner</div>
+    </div>
+    <div class="activities">
+
+      <div class="card activity">
+        <div class="time">8:30<span style="font-size:14px">am</span><span class="duration">1 hr</span></div>
+        <div class="body">
+          <div class="title">Yoga at the Spa</div>
+          <div class="meta"><span class="pill">14+ years</span> Concierge booked</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma?</span>
+            <span class="person"><span class="avatar a-serena">S</span>Serena?</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi?</span>
+          </div>
+        </div>
+        <div class="spots"><strong>3</strong>spots<div class="full">Filling up</div></div>
+      </div>
+
+      <div class="card activity">
+        <div class="time">11:45<span style="font-size:14px">am</span><span class="duration">1.5 hr</span></div>
+        <div class="body">
+          <div class="title">Yoga & Hike to the Yurt</div>
+          <div class="meta"><span class="pill">14+ years</span> Concierge booked</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+          </div>
+        </div>
+        <div class="spots"><strong>6</strong>spots<div class="open">3 open</div></div>
+      </div>
+
+      <div class="card activity">
+        <div class="time">1:30<span style="font-size:14px">pm</span><span class="duration">1 hr</span></div>
+        <div class="body">
+          <div class="title">Frontier Horse Ride</div>
+          <div class="meta"><span class="pill">10+ years</span> Concierge booked</div>
+          <div class="going">
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+          </div>
+        </div>
+        <div class="spots"><strong>4</strong>spots<div class="open">All open</div></div>
+      </div>
+
+      <div class="card activity">
+        <div class="time">3:30<span style="font-size:14px">pm</span><span class="duration">45 min</span></div>
+        <div class="body">
+          <div class="title">Byers Loop Horse Ride</div>
+          <div class="meta"><span class="pill">8+ years</span> Concierge booked</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+          </div>
+        </div>
+        <div class="spots"><strong>4</strong>spots<div class="open">3 open</div></div>
+      </div>
+
+      <div class="card activity">
+        <div class="time">4:30<span style="font-size:14px">pm</span><span class="duration">1 hr</span></div>
+        <div class="body">
+          <div class="title">Scenic Wagon Ride</div>
+          <div class="meta"><span class="pill">All ages</span> Concierge booked</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+            <span class="person"><span class="avatar a-sonny">S</span>Sonny</span>
+          </div>
+        </div>
+        <div class="spots"><strong>4</strong>spots<div class="full">Full</div></div>
+      </div>
+
+      <div class="card meal">
+        <div class="time">5:45<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">Celebratory Dinner at the Ranch House</div>
+          <div class="meta"><span class="pill">Meal</span> The big one — dress for it</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+            <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+            <span class="person"><span class="avatar a-sonny">S</span>Sonny (highchair)</span>
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>10</strong>+ highchair<div class="full">Full crew</div></div>
+      </div>
+
+      <div class="card free">
+        <div class="time">7:00<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">Game / Rec Room</div>
+          <div class="meta"><span class="pill">Hangout</span> Wind down, play, relax</div>
+        </div>
+        <div class="spots">all welcome</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SUNDAY -->
+  <section class="day" id="sunday">
+    <div class="day-header">
+      <div class="day-name">Sunday</div>
+      <div class="day-tag">Nature Walk · Mountain Adventures · Winter Park Dinner</div>
+    </div>
+    <div class="activities">
+
+      <div class="card activity">
+        <div class="time">8:00<span style="font-size:14px">am</span><span class="duration">1 hr</span></div>
+        <div class="body">
+          <div class="title">Guided Nature Walk</div>
+          <div class="meta"><span class="pill">All ages</span> Concierge booked · Whole family</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+            <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+            <span class="person"><span class="avatar a-sonny">S</span>Sonny</span>
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>12</strong>spots<div class="full">Full crew</div></div>
+      </div>
+
+      <div class="card activity">
+        <div class="time">10:00<span style="font-size:14px">am</span><span class="duration">1 hr</span></div>
+        <div class="body">
+          <div class="title">SUP Yoga</div>
+          <div class="meta"><span class="pill">14+ years</span> Concierge booked · Stand-up paddleboard yoga</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="open-slot">open</span>
+          </div>
+        </div>
+        <div class="spots"><strong>3</strong>spots<div class="open">1 open</div></div>
+      </div>
+
+      <div class="card free">
+        <div class="time">12:00<span style="font-size:14px">pm</span><span class="duration">afternoon</span></div>
+        <div class="body">
+          <div class="title">Choose Your Adventure</div>
+          <div class="meta"><span class="pill">Pick one</span> Three options going simultaneously</div>
+          <div style="margin-top:10px; display:grid; gap:8px;">
+            <div style="padding:10px 14px; background: var(--cream); border-radius: 8px;">
+              <strong style="color: var(--pine-deep);">Gondola + Hiking at the Peak</strong>
+            </div>
+            <div style="padding:10px 14px; background: var(--cream); border-radius: 8px;">
+              <strong style="color: var(--pine-deep);">Fraser River Paved Bike Trails</strong> <span style="color:var(--muted)">— through the woods</span>
+            </div>
+            <div style="padding:10px 14px; background: var(--cream); border-radius: 8px;">
+              <strong style="color: var(--pine-deep);">Rock Climbing</strong> <span style="color:var(--muted)">— picnic and watch</span>
+            </div>
+          </div>
+        </div>
+        <div class="spots">pick one</div>
+      </div>
+
+      <div class="card meal">
+        <div class="time">6:00<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">Dinner in Winter Park</div>
+          <div class="meta"><span class="pill">Meal</span> Restaurant TBD</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+            <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+            <span class="person"><span class="avatar a-sonny">S</span>Sonny</span>
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>12</strong>seats<div class="full">Full crew</div></div>
+      </div>
+
+      <div class="card free">
+        <div class="time">7:30<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">Game / Rec Room or Movie Night</div>
+          <div class="meta"><span class="pill">Hangout</span></div>
+        </div>
+        <div class="spots">all welcome</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MONDAY -->
+  <section class="day" id="monday">
+    <div class="day-header">
+      <div class="day-name">Monday</div>
+      <div class="day-tag">Fly Fishing · Zip Line · Archery · Indian Dinner · Bowling</div>
+    </div>
+    <div class="activities">
+
+      <div class="card activity">
+        <div class="time">8:00<span style="font-size:14px">am</span><span class="duration">4 hr</span></div>
+        <div class="body">
+          <div class="title">Fly Fishing on the Fraser River</div>
+          <div class="meta"><span class="pill">All ages</span> Concierge booked · DTR guides</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+          </div>
+        </div>
+        <div class="spots"><strong>6</strong>spots<div class="full">Full</div></div>
+      </div>
+
+      <div class="card activity">
+        <div class="time">8:30<span style="font-size:14px">am</span><span class="duration">1 hr</span></div>
+        <div class="body">
+          <div class="title">Yoga at the Spa</div>
+          <div class="meta"><span class="pill">All ages</span> Concierge booked</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+          </div>
+        </div>
+        <div class="spots"><strong>3</strong>spots<div class="open">2 open</div></div>
+      </div>
+
+      <div class="card activity">
+        <div class="time">2:00<span style="font-size:14px">pm</span><span class="duration">1 hr</span></div>
+        <div class="body">
+          <div class="title">Single Zip Line</div>
+          <div class="meta"><span class="pill">80+ lbs</span> Concierge booked</div>
+          <div class="going">
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+            <span class="open-slot">open</span>
+          </div>
+        </div>
+        <div class="spots"><strong>4</strong>spots<div class="open">All open</div></div>
+      </div>
+
+      <div class="card activity">
+        <div class="time">4:00<span style="font-size:14px">pm</span><span class="duration">1 hr</span></div>
+        <div class="body">
+          <div class="title">Family Archery</div>
+          <div class="meta"><span class="pill">All ages</span> Concierge booked</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+            <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>10</strong>spots<div class="full">Full</div></div>
+      </div>
+
+      <div class="card meal">
+        <div class="time">6:00<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">Dunbar Indian Dinner (in)</div>
+          <div class="meta"><span class="pill">Meal</span> Order in</div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+            <span class="person"><span class="avatar a-skyler">S</span>Skyler</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>11</strong>seats<div class="full">Full crew</div></div>
+      </div>
+
+      <div class="card free">
+        <div class="time">7:00<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">Family Bowling</div>
+          <div class="meta"><span class="pill">Hangout</span> In the game / rec room</div>
+        </div>
+        <div class="spots">all welcome</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TUESDAY -->
+  <section class="day" id="tuesday">
+    <div class="day-header">
+      <div class="day-name">Tuesday</div>
+      <div class="day-tag">Slow Morning · Goodbye Flights</div>
+    </div>
+    <div class="activities">
+
+      <div class="card free">
+        <div class="time">Morning</div>
+        <div class="body">
+          <div class="title">Swim, Lawn Games, Spa Treatments</div>
+          <div class="meta"><span class="pill">Free time</span> Easy last morning together</div>
+        </div>
+        <div class="spots">all welcome</div>
+      </div>
+
+      <div class="card flight">
+        <div class="time">3:30<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">United #1281 → San Diego</div>
+          <div class="meta"><span class="pill">Departure</span></div>
+          <div class="going">
+            <span class="person"><span class="avatar a-spencer">S</span>Spencer</span>
+            <span class="person"><span class="avatar a-anahi">A</span>Anahi</span>
+            <span class="person"><span class="avatar a-lauralynn">L</span>Lauralynn</span>
+            <span class="person"><span class="avatar a-dylan">D</span>Dylan</span>
+            <span class="person"><span class="avatar a-sonny">S</span>Sonny</span>
+            <span class="person"><span class="avatar a-jamma">J</span>Jamma</span>
+            <span class="person"><span class="avatar a-jampa">J</span>Jampa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>7</strong>flying</div>
+      </div>
+
+      <div class="card flight">
+        <div class="time">4:00<span style="font-size:14px">pm</span></div>
+        <div class="body">
+          <div class="title">United #2168 → LaGuardia</div>
+          <div class="meta"><span class="pill">Departure</span></div>
+          <div class="going">
+            <span class="person"><span class="avatar a-serena">S</span>Serena</span>
+            <span class="person"><span class="avatar a-max">M</span>Max</span>
+            <span class="person"><span class="avatar a-joey">J</span>Joey</span>
+            <span class="person"><span class="avatar a-noa">N</span>Noa</span>
+          </div>
+        </div>
+        <div class="spots"><strong>4</strong>flying</div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  See you on the mountain <span class="heart">♥</span>
+</footer>
+
+<script>
+  // Highlight active day in nav
+  const links = document.querySelectorAll('.day-link');
+  const sections = document.querySelectorAll('.day');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  // Smooth scroll
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>
